@@ -1,10 +1,12 @@
 # Thinktecture IdentityServer v3 #
 
-**Current status: Beta 1**
+**Current status: Beta 3**
+
+[![Gitter](https://badges.gitter.im/Join Chat.svg)](https://gitter.im/thinktecture/Thinktecture.IdentityServer.v3?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
 ## Overview ##
 
-IdentityServer v3 is a .NET-based open source implementation of an OpenID Connect and OAuth2 security token service.
+IdentityServer is a framework and a hostable component that allows implementing single sign-on and access control for modern web applications and APIs using protocols like OpenID Connect and OAuth2. It supports a wide range of clients like mobile, web, SPAs and desktop applications and is extensible to allow integration in new and existing architectures.
 
 [OpenID Connect specification](http://openid.net/specs/openid-connect-core-1_0.html) / [OAuth2 specification](http://tools.ietf.org/html/rfc6749 "OAuth2 specification")
 
@@ -26,7 +28,7 @@ public void Configuration(IAppBuilder appBuilder)
     var options = new IdentityServerOptions
     {
         IssuerUri = "https://idsrv3.com",
-        SiteName = "Thinktecture IdentityServer v3 - preview 1 (SelfHost)"
+        SiteName = "Thinktecture IdentityServer v3"
 
         SigningCertificate = Certificate.Get(),
         Factory = factory,
@@ -36,23 +38,29 @@ public void Configuration(IAppBuilder appBuilder)
 }
 ```
 
-You can find the *CN=idsrv3test* certificate and setup instructions in the [certificates](https://github.com/thinktecture/Thinktecture.IdentityServer.v3.Samples/tree/master/source/Certificates) folder in the samples repository.
+You can find a test signing certificate and setup instructions in the [certificates](https://github.com/thinktecture/Thinktecture.IdentityServer.v3.Samples/tree/master/source/Certificates) folder in the samples repository.
 
-The host [samples](https://github.com/thinktecture/Thinktecture.IdentityServer.v3.Samples/) shows other configuration options
+The host [samples](https://github.com/thinktecture/Thinktecture.IdentityServer.v3.Samples/) shows other configuration options, including
 * support for MembershipReboot and ASP.NET Identity based user stores
 * support for additional Katana authentication middleware (e.g. Google, Twitter, Facebook etc)
 * support for EntityFramework based persistence of configuration
 * support for WS-Federation
 
+## Related repositories ##
+* [Samples](https://github.com/thinktecture/Thinktecture.IdentityServer.v3.Samples)
+* [MembershipReboot support](https://github.com/thinktecture/Thinktecture.IdentityServer.v3.MembershipReboot)
+* [ASP.Net Identity support](https://github.com/thinktecture/Thinktecture.IdentityServer.v3.AspNetIdentity)
+* [EntityFramework support](https://github.com/thinktecture/Thinktecture.IdentityServer.v3.EntityFramework)
+* [WS-Federation plugin](https://github.com/thinktecture/Thinktecture.IdentityServer.v3.WsFederation)
+
+
 ## Credits ##
 IdentityServer is built using the following great open source projects:
 
-- ASP.NET Web API
-- Autofac
-- Json.Net
-- Thinktecture IdentityModel
-- ILMerge
-- DH.Logging
-- Katana
+- [ASP.NET Web API](https://aspnetwebstack.codeplex.com/)
+- [Autofac](http://autofac.org/)
+- [Json.Net](http://james.newtonking.com/json)
+- [LibLog](https://github.com/damianh/LibLog)
+- [Katana](https://katanaproject.codeplex.com/)
 
 thanks to all [contributors](https://github.com/thinktecture/Thinktecture.IdentityServer.v3/graphs/contributors)!

@@ -1,6 +1,17 @@
 ﻿/*
- * Copyright (c) Dominick Baier, Brock Allen.  All rights reserved.
- * see license
+ * Copyright 2014 Dominick Baier, Brock Allen
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *   http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
  */
 
 //------------------------------------------------------------------------------
@@ -66,11 +77,47 @@ namespace Thinktecture.IdentityServer.Core.Resources
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Client Identifier is required.
+        /// </summary>
+        public static string ClientIdRequired {
+            get {
+                return ResourceManager.GetString("ClientIdRequired", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The client application tried to access a resource it does not have access to.
+        /// </summary>
+        public static string invalid_scope {
+            get {
+                return ResourceManager.GetString("invalid_scope", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Invalid Username or Password.
         /// </summary>
         public static string InvalidUsernameOrPassword {
             get {
                 return ResourceManager.GetString("InvalidUsernameOrPassword", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to client_id is missing.
+        /// </summary>
+        public static string MissingClientId {
+            get {
+                return ResourceManager.GetString("MissingClientId", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Token is missing.
+        /// </summary>
+        public static string MissingToken {
+            get {
+                return ResourceManager.GetString("MissingToken", resourceCulture);
             }
         }
         
@@ -98,6 +145,69 @@ namespace Thinktecture.IdentityServer.Core.Resources
         public static string NoSubjectFromExternalProvider {
             get {
                 return ResourceManager.GetString("NoSubjectFromExternalProvider", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Password is required.
+        /// </summary>
+        public static string PasswordRequired {
+            get {
+                return ResourceManager.GetString("PasswordRequired", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to SSL is required.
+        /// </summary>
+        public static string SslRequired {
+            get {
+                return ResourceManager.GetString("SslRequired", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The client application tried to access a resource it does not have access to.
+        /// </summary>
+        public static string unauthorized_client {
+            get {
+                return ResourceManager.GetString("unauthorized_client", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to There was an unexpected error.
+        /// </summary>
+        public static string UnexpectedError {
+            get {
+                return ResourceManager.GetString("UnexpectedError", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The authorization server does not support the requested response type.
+        /// </summary>
+        public static string unsupported_response_type {
+            get {
+                return ResourceManager.GetString("unsupported_response_type", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Unsupported Media Type.
+        /// </summary>
+        public static string UnsupportedMediaType {
+            get {
+                return ResourceManager.GetString("UnsupportedMediaType", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Username is required.
+        /// </summary>
+        public static string UsernameRequired {
+            get {
+                return ResourceManager.GetString("UsernameRequired", resourceCulture);
             }
         }
     }

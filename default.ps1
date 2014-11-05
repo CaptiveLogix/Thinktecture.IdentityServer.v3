@@ -58,7 +58,7 @@ task ILMerge -depends Compile {
 	}
 
 	New-Item $dist_directory\lib\net45 -Type Directory
-	Invoke-Expression "$ilmerge_path /targetplatform:v4 /internalize:ilmerge.exclude /allowDup /target:library /out:$dist_directory\lib\net45\Thinktecture.IdentityServer.dll $input_dlls"
+	Invoke-Expression "$ilmerge_path /targetplatform:v4 /internalize /allowDup /target:library /out:$dist_directory\lib\net45\Thinktecture.IdentityServer.dll $input_dlls"
 }
 
 task CreateNuGetPackage -depends ILMerge {
@@ -76,5 +76,6 @@ task CreateNuGetPackage -depends ILMerge {
 	}
 
 	copy-item $src_directory\Thinktecture.IdentityServer.v3.nuspec $dist_directory
+	copy-item $output_directory\Thinktecture.IdentityServer.xml $dist_directory\lib\net45\
 	exec { . $nuget_path pack $dist_directory\Thinktecture.IdentityServer.v3.nuspec -BasePath $dist_directory -o $dist_directory -version $packageVersion }
 }
