@@ -55,12 +55,6 @@ namespace Thinktecture.IdentityServer.Core
           public const string LoginHint = "login_hint";
           public const string AcrValues = "acr_values";
         }
-        public static class EndSessionRequest
-        {
-          public const string PostLogoutRedirectUri = "post_logout_redirect_uri";
-          public const string State = "state";
-          public const string IdTokenHint = "id_token_hint";
-        }
 
         public static class TokenRequest
         {
