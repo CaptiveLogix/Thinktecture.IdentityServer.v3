@@ -138,8 +138,6 @@
     <Compile Include="Validation\ValidatedEndSessionRequest.cs" />
     <Compile Include="Validation\ValidatedRequest.cs" />
     <Compile Include="Extensions\AuthorizeResponseExtensions.cs" />
-    <Compile Include="Authentication\LogoutResult.cs" />
-    <Compile Include="Authentication\LogOutMessage.cs" />
     <Compile Include="Extensions\ClaimListExtensions.cs" />
     <Compile Include="Extensions\ValidatedAuthorizeRequestExtensions.cs" />
     <Compile Include="Configuration\Hosting\PreventUnsupportedRequestMediaTypesAttribute.cs" />
